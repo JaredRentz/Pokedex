@@ -12,6 +12,7 @@
 		7F1641011C21A553003B37EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1640FF1C21A553003B37EA /* Main.storyboard */; };
 		7F1641031C21A553003B37EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1641021C21A553003B37EA /* Assets.xcassets */; };
 		7F1641061C21A553003B37EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1641041C21A553003B37EA /* LaunchScreen.storyboard */; };
+		7F16410E1C21ADCE003B37EA /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F16410D1C21ADCE003B37EA /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7F1641021C21A553003B37EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1641051C21A553003B37EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1641071C21A553003B37EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F16410D1C21ADCE003B37EA /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			children = (
 				7F1640FA1C21A553003B37EA /* Pokedex */,
 				7F1640F91C21A553003B37EA /* Products */,
+				7F16410D1C21ADCE003B37EA /* pokemon.csv */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +128,7 @@
 			files = (
 				7F1641061C21A553003B37EA /* LaunchScreen.storyboard in Resources */,
 				7F1641031C21A553003B37EA /* Assets.xcassets in Resources */,
+				7F16410E1C21ADCE003B37EA /* pokemon.csv in Resources */,
 				7F1641011C21A553003B37EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +291,7 @@
 				7F16410C1C21A553003B37EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
