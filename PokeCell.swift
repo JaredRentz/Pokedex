@@ -15,9 +15,21 @@ class PokeCell: UICollectionViewCell {
     
     var pokemon = Pokemon!()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        layer.cornerRadius = 6.5
+        clipsToBounds = true
+    }
+    
+
     func configureCell (pokemoninfo:Pokemon) {
         
-        nameLbl.text = pokemoninfo.name
+        nameLbl.text = pokemoninfo.name.capitalizedString
         thumbImg.image = UIImage(named: "\(pokemoninfo.pokedexId)")
         
     }

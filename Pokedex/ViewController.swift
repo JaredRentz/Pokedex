@@ -8,14 +8,74 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet weak var CollectionView: UICollectionView!
+    
+    var pokemon = [Pokemon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-           }
-
-
+        parsePokemonCSV()
+       
+    }
+    
+    func parsePokemonCSV() {
+        
+        let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")!
+        
+        do {
+        let csv = try CSV(contentsOfURL: path)
+        let rows = csv.rows
+       
+    // now we need a loop to run through the pokemon.csv file and print to the cell label.
+            
+            for row in rows {
+                let pokeId = Int(row ["id"]!)!
+                let name = row ["identifier"]!
+                let poke = Pokemon(name: name, pokedexId: pokeId)
+                
+                pokemon.append(poke)
+            }
+            
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        
+    }
+    
+   
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Pokedex", forIndexPath: indexPath) as? PokeCell {
+            
+            let poke = pokemon[indexPath.row]
+            cell.configureCell(poke)
+            return cell
+            
+        } else {
+            
+            return PokeCell()
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pokemon.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(118, 118)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
+    }
 
     
 }
