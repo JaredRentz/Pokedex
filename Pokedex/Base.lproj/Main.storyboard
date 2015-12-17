@@ -72,6 +72,9 @@
                                     <constraint firstAttribute="height" constant="44" id="EMg-dO-9LV"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IAn-pm-LGN"/>
+                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dcc-pI-K6c">
                                 <rect key="frame" x="20" y="134" width="560" height="446"/>
@@ -151,6 +154,7 @@
                     </view>
                     <connections>
                         <outlet property="CollectionView" destination="Dcc-pI-K6c" id="WOk-Cn-S8c"/>
+                        <outlet property="searchBar" destination="LcE-ZK-1s4" id="Zk0-Ss-KWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
