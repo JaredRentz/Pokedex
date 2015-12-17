@@ -155,11 +155,62 @@
                     <connections>
                         <outlet property="CollectionView" destination="Dcc-pI-K6c" id="WOk-Cn-S8c"/>
                         <outlet property="searchBar" destination="LcE-ZK-1s4" id="Zk0-Ss-KWR"/>
+                        <segue destination="47n-nD-yQn" kind="show" identifier="PokemonDetailVC" id="EmR-S6-SFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="429"/>
+            <point key="canvasLocation" x="172" y="429"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="wDY-wj-P0o">
+            <objects>
+                <viewController id="47n-nD-yQn" customClass="PokemonDetailVC" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IyY-23-0PG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAA-NR-fmt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uva-GC-UFk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jj3-0G-zEg">
+                                <rect key="frame" x="20" y="48" width="107" height="106"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="4ze-SU-7cb"/>
+                                    <constraint firstAttribute="width" constant="107" id="whX-jK-fyD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fro-i9-OqT">
+                                <rect key="frame" x="20" y="155" width="107" height="22"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Fru-2k-Znn"/>
+                                    <constraint firstAttribute="width" constant="107" id="bdW-tK-hgV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jj3-0G-zEg" firstAttribute="top" secondItem="IyY-23-0PG" secondAttribute="bottom" constant="28" id="4OW-PO-nG4"/>
+                            <constraint firstItem="fro-i9-OqT" firstAttribute="top" secondItem="jj3-0G-zEg" secondAttribute="bottom" id="AGm-jh-rjC"/>
+                            <constraint firstItem="jj3-0G-zEg" firstAttribute="leading" secondItem="Uva-GC-UFk" secondAttribute="leadingMargin" id="lkv-cK-kAE"/>
+                            <constraint firstItem="fro-i9-OqT" firstAttribute="leading" secondItem="Uva-GC-UFk" secondAttribute="leadingMargin" id="sgd-iY-gi9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="jj3-0G-zEg" id="7Rw-QA-RaC"/>
+                        <outlet property="name" destination="fro-i9-OqT" id="9Ap-pz-uMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plH-Wa-3Mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="429"/>
         </scene>
     </scenes>
     <resources>
