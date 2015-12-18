@@ -25,12 +25,17 @@ class PokemonDetailVC: UIViewController {
 
     var pokemon: Pokemon!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalizedString
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
-    }
+        pokemon.downloadPokemon { () -> () in
+            
+        }
+        
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
